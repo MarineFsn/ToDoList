@@ -1,0 +1,42 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Indie Flower", cursive;
+}
+body .container {
+  margin: 0 auto;
+  width: 380px;
+  height: 650px;
+  padding: 10px;
+  background-color: #5C5C6C;
+  border-radius: 15px;
+}
+body .container .content {
+  width: 380px;
+  height: 100%;
+  height: auto;
+}
+body header {
+  width: 380px;
+  height: 200px;
+  background-image: url("../img/fromspace.jpg");
+  margin: 0 auto;
+  border-radius: 15px 15px 0 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body header .refresh .refresh-icon {
+  width: 40px;
+  height: 40px;
+  filter: #706652;
+}
+body header #date {
+  height: 150px;
+  bottom: 10px;
+  left: 10px;
+  font-size: 35px;
+  color: #8F99AD;
+  padding-top: 110px;
+  padding-left: 10px;
+}/*# sourceMappingURL=style.css.map */

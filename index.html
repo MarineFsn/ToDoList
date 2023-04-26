@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The To-Do List</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <script defer src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+    <!--Div container reprenant l'ensemble de la ToDoList-->
+    <header>
+        <!--Elements du Header : boutton Refresh + Date-->
+        <div class="refresh">
+           <img class="refresh-icon" src="./assets/icons/refresh.svg">
+        </div>
+        <div id="date"></div>
+    </header>
+        <!--on place le contenu de la carte : le btn check, le texte a implanter en js et l'icon trash-->
+        <div class="content">
+            <ul id="list">
+                <li class="item">
+                    <i class="completed-circle" job="complete" id="0"></i>
+                    <p class="textItem"></p>
+                    <i class="trash-icon" job="delete" id="0"></i>
+                </li>
+            </ul>
+            <!--zone d'input texte pour donner une valeur au contenu à implanter et un icone plus pour ajouter les items-->
+            <div class="add-to-do">
+                <i class="plus_circle"></i>
+                <input type="text" id="input" placeholder="add a To-Do">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
