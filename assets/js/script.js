@@ -120,10 +120,13 @@ addBtn.addEventListener("click", function () {
       trash: false,
     });
 
-    id++;
-  }
+    //ajouter les items dans le local storage
+    localStorage.setItem("TODO", JSON.stringify(LIST));
 
-  input.value = "";
+    id++;
+
+    input.value = "";
+  }
 });
 
 //complete to-do

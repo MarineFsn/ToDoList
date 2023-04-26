@@ -14,8 +14,6 @@ body {
       height: auto;
 
       #list {
-        height: 100%;
-        width: 100%;
         padding: 0;
 
         .item {
@@ -67,6 +65,7 @@ body {
         display: flex;
         justify-content: end;
 
+
         .plus-circle {
           padding-right: 15px;
           width: 40px;
@@ -88,7 +87,7 @@ body {
 
   header {
     width: 100%;
-    background-image: url("../img/fromspace.jpg");
+    background-image: url("../img/mountain.jpg");
     margin: 0 auto;
     border-radius: 15px 15px 0 0;
     background-position: center center;
@@ -110,9 +109,10 @@ body {
     #date {
       height: 100%;
       font-size: 35px;
-      color: #8f99ad;
+      color: #93a6c9;
       padding-top: 95px;
       padding-left: 10px;
+      font-weight: 600;
     }
   }
 }
