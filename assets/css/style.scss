@@ -2,20 +2,88 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Indie Flower', cursive;
-    
+
 
     .container {
         margin: 0 auto;
         width: 380px;
         height: 650px;
         padding: 10px;
-        background-color: #5C5C6C;
+        background-color: #2e4b6d;
         border-radius: 15px;
 
         .content {
             width: 380px;
             height: 100%;
             height: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            #list {
+                height: 350px;
+
+                .item {
+                    width: 300px;
+                    height: 35px;
+                    min-height: 35px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    .completed-circle {
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                        position: absolute;
+                    }
+
+                    .textItem {
+                        font-size: 25px;
+                        text-align: center;
+
+                    }
+
+                    .trash-icon {
+                        width: 570px;
+                        height: 30px;
+                        cursor: pointer;
+
+
+                    }
+                }
+            }
+
+            .add-to-do {
+                width: 360px;
+                height: 40px;
+                background-color: #B8C4DC;
+                padding: 10px;
+                border-radius: 15px;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-around;
+
+                .plus-circle {
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    margin-left: 310px;
+                    cursor: pointer;
+
+                }
+
+                #input {
+
+                    height: 35px;
+                    width: 300px;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 20px;
+                    padding-left: 10px;
+                }
+            }
         }
     }
 
@@ -24,18 +92,20 @@ body {
         height: 200px;
         background-image: url("../img/fromspace.jpg");
         margin: 0 auto;
-        border-radius: 15px 15px 0 0 ;
+        border-radius: 15px 15px 0 0;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
 
         .refresh {
+            display: flex;
+            justify-content: flex-end;
+
             .refresh-icon {
                 width: 40px;
                 height: 40px;
-                fill: ;
+                margin: 10px;
             }
-
         }
 
         #date {
@@ -44,7 +114,7 @@ body {
             left: 10px;
             font-size: 35px;
             color: #8F99AD;
-            padding-top: 110px;
+            padding-top: 95px;
             padding-left: 10px;
 
         }

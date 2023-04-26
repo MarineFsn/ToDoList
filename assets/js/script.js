@@ -31,3 +31,31 @@ showingDate();
 //Mise à jour de la date toutes les secondes
 setInterval(showingDate, 1000);
 
+// add a to-do
+
+function addToDo(toDo,id,done,trash) {
+    const toDo = input.value.trim();
+
+    if (!toDo) {
+        return;
+    }
+
+    const item = `
+        <li class="item">
+            <img class="completed-circle" src="assets/icons/checkedcircle.svg"id="${id}">
+            <p class="textItem">${toDo}</p>
+            <img class="trash-icon" src="./assets/icons/trash.svg" id=${id}>
+        </li>
+    `;
+
+    const position = "beforeend";
+
+    list.insertAdjacentHTML(position, item);
+}
+
+// Ajoute un élément à la liste avec la touche "Entrée"
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        addToDo();
+    }
+});

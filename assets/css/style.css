@@ -8,13 +8,68 @@ body .container {
   width: 380px;
   height: 650px;
   padding: 10px;
-  background-color: #5C5C6C;
+  background-color: #2e4b6d;
   border-radius: 15px;
 }
 body .container .content {
   width: 380px;
   height: 100%;
   height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body .container .content #list {
+  height: 350px;
+}
+body .container .content #list .item {
+  width: 300px;
+  height: 35px;
+  min-height: 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body .container .content #list .item .completed-circle {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+}
+body .container .content #list .item .textItem {
+  font-size: 25px;
+  text-align: center;
+}
+body .container .content #list .item .trash-icon {
+  width: 570px;
+  height: 30px;
+  cursor: pointer;
+}
+body .container .content .add-to-do {
+  width: 360px;
+  height: 40px;
+  background-color: #B8C4DC;
+  padding: 10px;
+  border-radius: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+}
+body .container .content .add-to-do .plus-circle {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin-left: 310px;
+  cursor: pointer;
+}
+body .container .content .add-to-do #input {
+  height: 35px;
+  width: 300px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding-left: 10px;
 }
 body header {
   width: 380px;
@@ -26,10 +81,14 @@ body header {
   background-repeat: no-repeat;
   background-size: cover;
 }
+body header .refresh {
+  display: flex;
+  justify-content: flex-end;
+}
 body header .refresh .refresh-icon {
   width: 40px;
   height: 40px;
-  filter: #706652;
+  margin: 10px;
 }
 body header #date {
   height: 150px;
@@ -37,6 +96,6 @@ body header #date {
   left: 10px;
   font-size: 35px;
   color: #8F99AD;
-  padding-top: 110px;
+  padding-top: 95px;
   padding-left: 10px;
 }/*# sourceMappingURL=style.css.map */
