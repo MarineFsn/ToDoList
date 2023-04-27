@@ -8,6 +8,8 @@ body {
 body .container {
   margin: 0 auto;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 body .container .content {
   height: 100%;
@@ -52,6 +54,8 @@ body .container .content .lineThrough {
 }
 body .container .content .add-to-do {
   height: 40px;
+  width: 60%;
+  margin: 0 auto;
   background-color: #b8c4dc;
   border-radius: 15px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -74,7 +78,7 @@ body .container .content .add-to-do #input {
 }
 body header {
   width: 100%;
-  background-image: url("../img/mountain.jpg");
+  background-image: url("../img/fromspace.jpg");
   margin: 0 auto;
   border-radius: 15px 15px 0 0;
   background-position: center center;

@@ -18,7 +18,6 @@ const LINE_THROUGH = "lineThrough";
 let LIST, id;
 
 //garder les items dans le local storage
-
 let data = localStorage.getItem("TODO");
 if (data) {
   LIST = JSON.parse(data);
@@ -67,12 +66,12 @@ function addToDo(toDo, id, done, trash) {
   const LINE = done ? LINE_THROUGH : "";
 
   const item = ` <li class="item">
-                       <img class="completed-circle  ${DONE}  " src="assets/icons/circle.svg"id="${id}"
-                       job="complete">
-                       <p class="textItem ${LINE} ">${toDo}</p>
-                       <img class="trash-icon" src="./assets/icons/trash.svg" id=${id} job="delete">
-                  </li>
-                `;
+                         <img class="completed-circle  ${DONE}  " src="assets/icons/circle.svg"id="${id}"
+                         job="complete">
+                         <p class="textItem ${LINE} ">${toDo}</p>
+                         <img class="trash-icon" src="./assets/icons/trash.svg" id=${id} job="delete">
+                    </li>
+                  `;
 
   const position = "beforeend";
 
@@ -105,6 +104,7 @@ document.addEventListener("keyup", function (event) {
   }
 });
 
+// ajoute les élément au click sur "circle-plus"
 const addBtn = document.querySelector(".plus-circle");
 addBtn.addEventListener("click", function () {
   const toDo = input.value;
@@ -144,6 +144,8 @@ function completeToDo(element) {
   } else {
     circle.src = "assets/icons/circle.svg";
   }
+  //ajouter les items dans le local storage
+  localStorage.setItem("TODO", JSON.stringify(LIST));
 }
 
 //remove to-do
