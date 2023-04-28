@@ -5,7 +5,7 @@ export function completeToDo(element) {
     element.classList.toggle(CHECK);
     element.classList.toggle(UNCHECK);
     element.parentNode.querySelector(".textItem").classList.toggle(LINE_THROUGH);
-
+  
     LIST[element.id].done = LIST[element.id].done ? false : true;
   
     const circle = element.parentNode.querySelector(".completed-circle");

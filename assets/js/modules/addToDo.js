@@ -19,4 +19,5 @@ export function addToDo(toDo, id, done, trash) {
   const position = "beforeend";
 
   list.insertAdjacentHTML(position, item);
+  
 }

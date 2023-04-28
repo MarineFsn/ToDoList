@@ -55,7 +55,6 @@ document.addEventListener("keyup", function (event) {
     //If the input isn't empty
     if (toDo) {
       addToDo(toDo, id, false, false);
-
       LIST.push({
         name: toDo,
         id: id,
@@ -64,7 +63,6 @@ document.addEventListener("keyup", function (event) {
       });
       //Add the items in the local storage
       localStorage.setItem("TODO", JSON.stringify(LIST));
-
       id++;
     }
     input.value = "";
@@ -86,9 +84,7 @@ addBtn.addEventListener("click", function () {
     });
     //Add the items in the local storage
     localStorage.setItem("TODO", JSON.stringify(LIST));
-
     id++;
-    
     input.value = "";
   }
 });
