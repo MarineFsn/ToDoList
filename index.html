@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The To-Do List</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="assets/js/modules/script.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <!--Elements du Header : boutton Refresh + Date-->
+        <div class="refresh">
+          <img class="refresh-icon" src="assets/icons/refresh.svg" />
+        </div>
+        <div id="date"></div>
+      </header>
+      <div class="content">
+        <ul id="list">
+          <!--TODO ITEMS HERE-->
+        </ul>
+        <!--zone d'input texte pour donner une valeur au contenu à implanter et un icone plus pour ajouter les items-->
+        <div class="add-to-do">
+          <img class="plus-circle" src="assets/icons/plus.svg" />
+          <input type="text" id="input" placeholder="Add a To-Do" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
