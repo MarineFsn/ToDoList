@@ -1,6 +1,5 @@
-//selectionner les éléments dans HTML
+import { addToDo} from "./addToDo.js";
 
-//fonction de la To-Do list
 const refresh = document.querySelector(".refresh");
 //add date
 const dateElement = document.getElementById("date");
@@ -10,9 +9,9 @@ const list = document.getElementById("list");
 const input = document.getElementById("input");
 
 //noms de classes
-const CHECK = "circle.svg";
-const UNCHECK = "completed-circle.svg";
-const LINE_THROUGH = "lineThrough";
+export const CHECK = "circle.svg";
+export const UNCHECK = "completed-circle.svg";
+export const LINE_THROUGH = "lineThrough";
 
 //variables
 let LIST, id;
@@ -27,6 +26,58 @@ if (data) {
   LIST = [];
   id = 0;
 }
+
+
+  // Ajoute un élément à la liste avec la touche "Entrée"
+  document.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+      const toDo = input.value;
+  
+      //si l'input n'est pas vide
+      if (toDo) {
+        addToDo(toDo, id, false, false);
+  
+        LIST.push({
+          name: toDo,
+          id: id,
+          done: false,
+          trash: false,
+        });
+  
+        //ajouter les items dans le local storage
+        localStorage.setItem("TODO", JSON.stringify(LIST));
+  
+        id++;
+      }
+  
+      input.value = "";
+    }
+  });
+
+    // ajoute les élément au click sur "circle-plus"
+    export const addBtn = document.querySelector(".plus-circle");
+    addBtn.addEventListener("click", function () {
+      const toDo = input.value;
+    
+      //si l'input n'est pas vide
+      if (toDo) {
+        addToDo(toDo, id, false, false);
+    
+        LIST.push({
+          name: toDo,
+          id: id,
+          done: false,
+          trash: false,
+        });
+    
+        //ajouter les items dans le local storage
+        localStorage.setItem("TODO", JSON.stringify(LIST));
+    
+        id++;
+    
+        input.value = "";
+      }
+    });
 
 function loadlist(array) {
   array.forEach(function (item) {
@@ -55,79 +106,6 @@ showingDate();
 //Mise à jour de la date toutes les secondes
 setInterval(showingDate, 1000);
 
-// add a to-do
-
-function addToDo(toDo, id, done, trash) {
-  if (trash) {
-    return;
-  }
-
-  const DONE = done ? CHECK : UNCHECK;
-  const LINE = done ? LINE_THROUGH : "";
-
-  const item = ` <li class="item">
-                         <img class="completed-circle  ${DONE}  " src="assets/icons/circle.svg"id="${id}"
-                         job="complete">
-                         <p class="textItem ${LINE} ">${toDo}</p>
-                         <img class="trash-icon" src="./assets/icons/trash.svg" id=${id} job="delete">
-                    </li>
-                  `;
-
-  const position = "beforeend";
-
-  list.insertAdjacentHTML(position, item);
-}
-
-// Ajoute un élément à la liste avec la touche "Entrée"
-document.addEventListener("keyup", function (event) {
-  if (event.key === "Enter") {
-    const toDo = input.value;
-
-    //si l'input n'est pas vide
-    if (toDo) {
-      addToDo(toDo, id, false, false);
-
-      LIST.push({
-        name: toDo,
-        id: id,
-        done: false,
-        trash: false,
-      });
-
-      //ajouter les items dans le local storage
-      localStorage.setItem("TODO", JSON.stringify(LIST));
-
-      id++;
-    }
-
-    input.value = "";
-  }
-});
-
-// ajoute les élément au click sur "circle-plus"
-const addBtn = document.querySelector(".plus-circle");
-addBtn.addEventListener("click", function () {
-  const toDo = input.value;
-
-  //si l'input n'est pas vide
-  if (toDo) {
-    addToDo(toDo, id, false, false);
-
-    LIST.push({
-      name: toDo,
-      id: id,
-      done: false,
-      trash: false,
-    });
-
-    //ajouter les items dans le local storage
-    localStorage.setItem("TODO", JSON.stringify(LIST));
-
-    id++;
-
-    input.value = "";
-  }
-});
 
 //complete to-do
 
